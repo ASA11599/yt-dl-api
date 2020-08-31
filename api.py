@@ -29,7 +29,7 @@ class My_http_handler(http.server.BaseHTTPRequestHandler):
                     video_as_bytes = vf.read()
                 os.remove(video_filename)
                 self.send_response(200)
-                self.send_header("Content-type", "media/mp4")
+                self.send_header("Content-type", "video/mp4")
                 self.end_headers()
                 self.wfile.write(video_as_bytes)
             except:
